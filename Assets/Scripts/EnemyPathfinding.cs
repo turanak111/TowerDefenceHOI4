@@ -9,15 +9,14 @@ public class EnemyPathfinding : MonoBehaviour
     private List<Vector3> waypointList;
     private int currentWaypointIndex;
 
-    public void Setup(List<Vector3> waypointList)
+    // Setup fonksiyonunu moveSpeed alacak şekilde güncelliyoruz
+    public void Setup(List<Vector3> waypointList, float speed)
     {
         this.waypointList = waypointList;
+        this.moveSpeed = speed;
         currentWaypointIndex = 0;
-        
-        // Düşmanı ilk noktanın (spawn noktasının) üzerine koy
         transform.position = waypointList[currentWaypointIndex];
     }
-
     private void Update()
     {
         // Eğer gidecek bir yolumuz varsa

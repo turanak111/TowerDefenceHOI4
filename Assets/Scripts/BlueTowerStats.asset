@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bc0152fd588884dbcf65e8834e8495, type: 3}
+  m_Name: BlueTowerStats
+  m_EditorClassIdentifier: 
+  towerName: BlueTower
+  towerPrefab: {fileID: 8232159823994034399, guid: 60d520bc5803c2740be403b7de55e4d5, type: 3}
+  bulletPrefab: {fileID: 8556558561567601441, guid: 7c5d85710093f3449bea6c7d4ce23289, type: 3}
+  range: 20
+  fireRate: 2
+  damage: 10
