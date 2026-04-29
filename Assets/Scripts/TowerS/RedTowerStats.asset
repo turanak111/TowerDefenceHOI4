@@ -18,3 +18,4 @@ MonoBehaviour:
   range: 20
   fireRate: 0.2
   damage: 10
+  cost: 20
