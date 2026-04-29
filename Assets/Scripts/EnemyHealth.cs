@@ -1,18 +1,30 @@
+using Microlight.MicroBar;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable 
 {
     public EnemyStatsSO enemyStats; 
     private float currentHealth;
+    [SerializeField] MicroBar healthBar;
 
    public void InitializeHealth() 
     {
         currentHealth = enemyStats.maxHealth;
+        if(healthBar != null)
+        {
+                 healthBar.Initialize(currentHealth);
+        }
+   
     }
 
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+        if(healthBar != null)
+        {
+                    healthBar.UpdateBar(healthBar.CurrentValue - amount);
+        }
+
         Debug.Log($"{enemyStats.enemyName} vuruldu! Kalan Can: {currentHealth}");
 
         if (currentHealth <= 0)

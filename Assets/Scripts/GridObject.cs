@@ -14,6 +14,7 @@ public class GridObject
     public int x { get; private set; }
     public int y { get; private set; }
 
+    public Transform placedTower;
     // Hücrenin tipini tutan değişken. Varsayılan olarak her yer "Empty" başlar.
     public TileType type = TileType.Empty; 
     public bool isOccupied = false; // Üzerinde kule var mı?

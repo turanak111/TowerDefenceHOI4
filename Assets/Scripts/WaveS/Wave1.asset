@@ -15,7 +15,7 @@ MonoBehaviour:
   waveName: Wave1
   enemySetups:
   - enemyType: {fileID: 11400000, guid: 4d941e63346b981479ebb1df28e2f0f1, type: 2}
-    count: 2
+    count: 1
     spawnDelay: 0.5
   - enemyType: {fileID: 11400000, guid: 1138283f19b9b4342aeccb52a85bbfc5, type: 2}
     count: 2
@@ -31,6 +31,33 @@ MonoBehaviour:
     spawnDelay: 0.1
   - enemyType: {fileID: 11400000, guid: 4d941e63346b981479ebb1df28e2f0f1, type: 2}
     count: 2
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 5
+    spawnDelay: 3
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
     spawnDelay: 0.1
   - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
     count: 1
