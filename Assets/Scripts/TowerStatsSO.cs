@@ -13,4 +13,7 @@ public class TowerStatsSO : ScriptableObject
     public float range;
     public float fireRate;
     public float damage; // Kulenin mermisi ne kadar hasar vuracak?
+    
+    [Header("Ekonomi")]
+    public float cost; // Bu kulenin satın alma maliyeti
 }

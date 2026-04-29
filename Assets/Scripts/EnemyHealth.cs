@@ -36,6 +36,15 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     private void Die()
     {
         Debug.Log($"{enemyStats.enemyName} öldü!");
+        
+        // Düşman öldüğünde para ver
+        if (enemyStats.rewardMoney > 0)
+        {
+            CoinManager.Instance.AddCoins(enemyStats.rewardMoney);
+            
+
+        }
+        
         // Para kazanma mekaniği buraya gelecek
         Destroy(gameObject);
     }

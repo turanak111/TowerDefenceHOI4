@@ -11,6 +11,12 @@ public class Tower : MonoBehaviour
 
     private float fireCountdown = 0f;
 
+    private void Start()
+    {
+        // İlk test parasını CoinManager'dan doğrudan ayarla (GameManager'da yapılmalı)
+        // CoinManager.Instance.SetStartingCoins(100);
+    }
+
     private void Update()
     {
         if (target == null)

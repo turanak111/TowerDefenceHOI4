@@ -6,6 +6,8 @@ public class TowerBuilder : MonoBehaviour
     public Transform towerPrefab;
     [Header("Seçili Kule")]
     public TowerStatsSO selectedTowerStats;
+    [Header("UI Referansları")]
+    public TowerCostDisplay towerCostDisplay;
 
     private bool isRemovingTower = false;
 
@@ -14,6 +16,16 @@ public class TowerBuilder : MonoBehaviour
     {
         selectedTowerStats = towerStats;
         isRemovingTower = false; 
+        
+        // UI'da tower maliyetini göster
+        if (towerCostDisplay != null)
+        {
+            if (towerStats != null)
+                towerCostDisplay.ShowTowerCost(towerStats);
+            else
+                towerCostDisplay.HideTowerCost();
+        }
+        
         Debug.Log("Yeni Kule Seçildi: " + (towerStats != null ? towerStats.towerName : "Seçim İptal"));
     }
 
@@ -69,6 +81,13 @@ public class TowerBuilder : MonoBehaviour
                 {
                     if(selectedTowerStats == null) return;
 
+                    // Para kontrolü - Yeterli coin var mı?
+                    if (!CoinManager.Instance.TryPurchaseTower(selectedTowerStats.cost, selectedTowerStats.towerName))
+                    {
+                        Debug.Log($"Para yetersiz! {selectedTowerStats.towerName} satın alınamadı.");
+                        return;
+                    }
+
                     Vector3 cellCenter = grid.GetWorldPositionCenter(x, y);
                     
                     // Instantiate edilen objeyi GamebObject/Transform olarak yakala
@@ -77,7 +96,6 @@ public class TowerBuilder : MonoBehaviour
                     // Yakalanan bu objeyi grid hücresinin içine kaydet
                     clickedObject.placedTower = newTower;
                     clickedObject.isOccupied = true;
-                    
                     Debug.Log("Kule inşa edildi: " + x + ", " + y);
                 }
                 else
