@@ -16,4 +16,7 @@ public class TowerStatsSO : ScriptableObject
     
     [Header("Ekonomi")]
     public float cost; // Bu kulenin satın alma maliyeti
+    
+    [Header("Alan Hasarı")]
+    public float explosionRadius; // Patlama çapı (0 = tek hedef, >0 = AoE)
 }

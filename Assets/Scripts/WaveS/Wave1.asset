@@ -65,3 +65,9 @@ MonoBehaviour:
   - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
     count: 1
     spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1
+  - enemyType: {fileID: 11400000, guid: 90fae6918bd32c849a297d854fd997d4, type: 2}
+    count: 1
+    spawnDelay: 0.1

@@ -11,11 +11,7 @@ public class Tower : MonoBehaviour
 
     private float fireCountdown = 0f;
 
-    private void Start()
-    {
-        // İlk test parasını CoinManager'dan doğrudan ayarla (GameManager'da yapılmalı)
-        // CoinManager.Instance.SetStartingCoins(100);
-    }
+
 
     private void Update()
     {
@@ -75,8 +71,8 @@ public class Tower : MonoBehaviour
         Projectile projectile = projObj.GetComponent<Projectile>();
         if (projectile != null)
         {
-            // Mermiye hem hedefi hem de kulenin hasarını gönderiyoruz
-            projectile.Setup(target, towerStats.damage);
+            // Mermiye hedef, hasar ve alan hasarı çapını gönderiyoruz
+            projectile.Setup(target, towerStats.damage, towerStats.explosionRadius);
         }
     }
 

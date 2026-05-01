@@ -11,4 +11,5 @@ public class EnemyStatsSO : ScriptableObject
     public float maxHealth;
     public float moveSpeed;
     public int rewardMoney; // Öldüğünde vereceği para
+
 }
